@@ -1,2 +1,5 @@
 var Compiler = require("./compiler");
-module.exports = Compiler;
+var Template = require("./template");
+var BooTemplate = Template;
+BooTemplate.Compiler = Compiler;
+module.exports = Template;
