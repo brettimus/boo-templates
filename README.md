@@ -10,10 +10,15 @@ template.compile({foo: "barn"});
 ```
 
 ```javascript
-var template = new BooTemplate("This is <%foo%>ey.");
+var template = new BooTemplate("This is <%foo%>ey.", "<%", "%>");
 template.compile({foo: "barkl"});
 // => "This is barkley."
 ```
+
+## a Compiler(open, close)
+the Compiler is what powers a template. It implements a global search on a given template string and evalutes anything between `open` and `close` delimiters.
+
+`open` and `close` default to `"{{"` and `"}}"`
 
 ```javascript
 var compiler = new BooTemplate.Compiler();
