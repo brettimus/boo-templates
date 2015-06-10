@@ -29,6 +29,6 @@ compiler.compile("{{foo}}{{bar}}", {foo: "Boo", bar: "Template"});
 
 ```javascript
 var compiler = new BooTemplate.Compiler("<%", "%>");
-compiler.compile("{{foo}} {{bar}}", {foo: "Your", bar: "Boo"});
+compiler.compile("<%foo%> <%bar%>", {foo: "Your", bar: "Boo"});
 // => "Your Boo"
 ```
