@@ -3,3 +3,4 @@ var Template = require("./template");
 var BooTemplate = Template;
 BooTemplate.Compiler = Compiler;
 module.exports = Template;
+global.BooTemplate = BooTemplate;
